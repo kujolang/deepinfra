@@ -1,0 +1,1 @@
+Root exports are in `deepinfra.kujo`; native DeepInfra code is `src/deepinfra.kujo`; the AI SDK driver is `src/provider.kujo`. Run `bash scripts/release_quality_gate.sh`. Preserve DeepInfra reasoning/tool metadata, use immutable dependencies, and do not modify AI SDK core.

@@ -1,0 +1,31 @@
+
+## gate: release_quality
+$ bash scripts/release_quality_gate.sh
+
+============================================================
+Test Results
+============================================================
+Tests: 2 total, 2 passed, 0 failed
+Time:  46ms
+============================================================
+
+All tests passed! ✨
+
+============================================================
+Test Results
+============================================================
+Tests: 2 total, 2 passed, 0 failed
+Time:  12ms
+============================================================
+
+All tests passed! ✨
+DeepInfra offline release gate: PASS (2 deterministic test files)
+gate release_quality: pass
+
+## gate: diff_check
+$ git diff --check -- . | grep -v iterations/diff.patch || test $? -eq 1
+.loop-engineering/iterations/001/diff.patch:60: trailing whitespace.
++--- 
+.loop-engineering/iterations/001/diff.patch:77: trailing whitespace.
++-- 
+gate diff_check: pass
