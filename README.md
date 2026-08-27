@@ -9,7 +9,10 @@ DeepInfra OpenAI-compatible chat plus native model inference for Kujo.
 ## Install
 
 ```bash
-kujo run /path/to/kennel/kennel.kujo --interpreter -- add github:kujolang/deepinfra@v0.1.1 --alias deepinfra
+kujo run /path/to/kennel/kennel.kujo \
+  --interpreter \
+  -- add github:kujolang/deepinfra@v0.1.1 \
+  --alias deepinfra
 kujo run /path/to/kennel/kennel.kujo --interpreter -- install
 export DEEPINFRA_TOKEN=your-token
 ```
