@@ -18,8 +18,20 @@ export DEEPINFRA_TOKEN=your-token
 
 ```kujo
 from deepinfra import create_client, client_chat
+
 client := create_client({})
-result := client_chat(client, {"model":"deepseek-ai/DeepSeek-V3","messages":[{"role":"user","content":"Hello from Kujo!"}]})
+request := {
+    "model": "deepseek-ai/DeepSeek-V3",
+    "messages": [
+        {
+            "role": "user",
+            "content": "Hello from Kujo!"
+        }
+    ]
+}
+
+result := client_chat(client, request)
+
 print(result["data"]["choices"][0]["message"]["content"])
 ```
 
